@@ -54,5 +54,9 @@ def find_index(items: Sequence[Any], value: Any, start: int = 0, end: int | None
 
 def swap_first_last(items: Sequence[Any]) -> Tuple[Any, ...]:
 	"""交换首尾元素并返回新元组。测试会保证长度 >= 2。"""
+	ls=list(items)
+	temp=ls[-1]
+	ls[-1]=ls[0]
+	ls[0]=temp
 	raise NotImplementedError
 

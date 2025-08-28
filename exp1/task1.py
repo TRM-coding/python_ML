@@ -13,20 +13,32 @@ from typing import Any, Iterable, List, Sequence, Tuple
 
 def make_list(a: Any, b: Any, c: Any) -> List[Any]:
 	"""由三个值组成并返回一个列表。"""
-	raise NotImplementedError
+	# raise NotImplementedError
+	ls=[]
+	ls.append(a)
+	ls.append(b)
+	ls.append(c)
+	# ls=[a,b,c]
+	return ls
 
 
-def list_length(items: Sequence[Any]) -> int:
+def list_length(items: list[Any]) -> int:
 	"""返回列表的长度。"""
-	raise NotImplementedError
+	lenth=len(items)
+	# raise NotImplementedError
+	return lenth
 
 
-def get_first_last(items: Sequence[Any]) -> Tuple[Any, Any]:
+def get_first_last(items: list[Any]) -> Tuple[Any, Any]:
 	"""返回 (第一个元素, 最后一个元素) 的二元组。
 
 	注意：测试会保证传入的序列非空。
 	"""
-	raise NotImplementedError
+	first_=items[0]
+	end_=items[-1]
+
+	# raise NotImplementedError
+	return (first_,end_)
 
 
 def slice_middle(items: Sequence[Any], start: int, end: int, step: int | None = None) -> List[Any]:
@@ -44,12 +56,16 @@ def concatenate_lists(a: Iterable[Any], b: Iterable[Any]) -> List[Any]:
 
 def repeat_list(items: Iterable[Any], times: int) -> List[Any]:
 	"""使用 * 运算符将序列重复 times 次后返回列表。"""
-	raise NotImplementedError
+	
+	# raise NotImplementedError
+	return items*times
 
 
 def copy_list_slice(items: Iterable[Any]) -> List[Any]:
 	"""使用切片返回一个浅拷贝。"""
+
 	raise NotImplementedError
+	# return items[:]
 
 
 def copy_list_list(items: Iterable[Any]) -> List[Any]:
@@ -59,7 +75,9 @@ def copy_list_list(items: Iterable[Any]) -> List[Any]:
 
 def replace_slice(items: Iterable[Any], start: int, end: int, replacement: Iterable[Any]) -> List[Any]:
 	"""用 replacement 替换切片 items[start:end]，返回新列表（不修改入参）。"""
-	raise NotImplementedError
+	items[start:end]=replacement
+	# raise NotImplementedError
+	return items
 
 
 def insert_at(items: Iterable[Any], index: int, value: Any) -> List[Any]:

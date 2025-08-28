@@ -29,7 +29,18 @@ def compare_numbers(a_raw: str, b_raw: str) -> str:
 
 
 def choose_operation(op: str, x: float, y: float) -> Optional[float]:
+    #op:"+" return x+y
+    #op:"-" return x-y
+    #op:"*" return x*y
+    #op:"/" return x/y
     """
     根据 op 执行 + - * / 四则运算；非法 op 返回 None；除数为 0 时返回 None。
     """
-    raise NotImplementedError
+    if op=="+":
+        return x+y
+    elif op =='-':
+        return x-y
+    elif op=='*':
+        return x*y
+    elif op=='/':
+        return x/y
